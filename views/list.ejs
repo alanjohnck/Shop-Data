@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+    <div class="heading">
+    
+
+        <h1>Billing Chart</h1>
+        <form action="/search" method="post">
+           
+        <input type="text" placeholder="Search the Item by Date...." name="searchresult">
+        <button class="Search">search</button>
+      
+        </form>
+       
+      
+
+    </div>
+    
+    <form action="/" method="post">
+    <div class="personDetails">
+
+ <div> <span>Person Name</span>   <input type="text"  name="personName"></div>
+     <div> <span>Product Name:</span>  <input type="text" name="productName"></div>
+        <div>  <span>Kilogram(kg):</span><input type="integer" name="productKilogram"></div>
+       
+            <div>  <span>Price(rs):</span><input type="integer" name="productPrice"></div>
+                    <div> <button type="submit">Add to Table</button></div>
+    
+    </div>
+    </form>
+  <div>
+    <table border="1">
+        <tr>
+            
+            <th>Person Name</th>
+            <th>Product Name</th>
+            <th>Date</th>
+            <th>Kilograms</th>
+            <th>Price</th>
+          
+        </tr>
+   
+   
+  
+  <% fulldetails.forEach(function(persondetails){ %>
+    
+ <tr>
+  
+    <td><%= persondetails.name %></td> 
+    <td><%= persondetails.productName%></td> 
+    <td><%=kindOfday %></td>
+    <td><%= persondetails.kilogram %></td> 
+    <td><%= persondetails.price %></td> 
+  
+</tr>
+</div>
+<%})%>
+ 
+</table>
+</div>
+</body>
+</html>
